@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "8i+RN7hi5k0D6Xmsaq59mHfty0RYtSqTnoQqDFQK24+hXPH+U5PTqr4FgywN6571k7H6iaHzq2dJWFQa5WdRyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oussa\\source\\repos\\Gestion_immobilier\\Gestion_immobilier\\Gestion_immobilier.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oussa\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\system.componentmodel.composition\\4.7.0\\system.componentmodel.composition.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\system.management\\4.7.0\\system.management.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\oussa\\.nuget\\packages\\ui.for.winforms.allcontrols.net70\\2023.1.117\\ui.for.winforms.allcontrols.net70.2023.1.117.nupkg.sha512"
+  ],
+  "logs": []
+}
