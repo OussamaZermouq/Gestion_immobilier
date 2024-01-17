@@ -1,4 +1,5 @@
-﻿using Gestion_immobilier.Database;
+﻿using Gestion_immobilier.Admin;
+using Gestion_immobilier.Database;
 using MediaFoundation;
 using System;
 using System.Collections.Generic;
@@ -50,12 +51,19 @@ namespace Gestion_immobilier
                 object output = cmd.ExecuteScalar();
                 if (Convert.ToInt32(output) > 0)
                 {
-                    query = $"select role_name from roles r join users u on u.role_id=r.role_id where u.user_id=(select user_id from users where username='{username_input.Text}' and password='{password_input.Text}' )";
+                    query = $"select role from users where username='{username_input.Text}' and password='{password_input.Text}'";
                     var role = new SqlCommand(query, connection).ExecuteScalar();
+                    if (role.ToString() == "admin")
+                    {
+                        this.Hide();
+                        AdminMDI adminMDI= new AdminMDI();
+                        adminMDI.Show();
+                    }
                     RadMessageBox.Show("Login successful");
                 }
                 else
                 {
+
                     RadMessageBox.Show("Login failed");
 
                 }
