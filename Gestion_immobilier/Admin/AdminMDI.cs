@@ -47,5 +47,20 @@ namespace Gestion_immobilier.Admin
             client_form.MdiParent = this;
             client_form.Show();
         }
+
+        private void radMenuButtonItem4_Click(object sender, EventArgs e)
+        {
+            Vente vente_form = new Vente();
+            vente_form.MdiParent = this;
+            vente_form.Show();
+        }
+
+        private void radMenuButtonItem5_Click(object sender, EventArgs e)
+        {
+
+            Location location = new Location();
+            location.MdiParent = this;
+            location.Show();
+        }
     }
 }

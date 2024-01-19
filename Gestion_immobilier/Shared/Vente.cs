@@ -25,6 +25,7 @@ namespace Gestion_immobilier.Shared
         {
             connection = new Connection();
             remplir_comboboxes();
+            remplir_dgv();
 
         }
 
@@ -35,12 +36,13 @@ namespace Gestion_immobilier.Shared
             {
                 agent_drop_down.Items.Add(dr.GetValue(0).ToString());
             }
-
+            dr.Close();
             dr = connection.renvoyer_Data_Reader("select nom_contract from contracts");
             while (dr.Read())
             {
                 contrat_drop_down.Items.Add(dr.GetValue(0).ToString());
             }
+            dr.Close();
 
 
             dr = connection.renvoyer_Data_Reader("select nom from Bien");
@@ -62,7 +64,7 @@ namespace Gestion_immobilier.Shared
             }
             else
             {
-                string sql = $"Insert into vente values ('{nom_vente}', '{date_vente.Text}', '{agent_drop_down.Text}','{Bien_drop_down.Text}', '{contrat_drop_down.Text}')";
+                string sql = $"Insert into vente values ('{nom_vente.Text}', '{date_vente.Text}', (select user_id from users where username='{agent_drop_down.Text}'),(select id_bien from Bien where nom='{Bien_drop_down.Text}'), (select id_contract from contracts where nom_contract='{contrat_drop_down.Text}'))";
                 if (connection.executer(sql) > 0)
                 {
                     RadMessageBox.Show("Vente ajouter!");
@@ -92,7 +94,7 @@ namespace Gestion_immobilier.Shared
             }
             else
             {
-                string sql = $"Update vente set date_vente='{date_vente.Text}', agent_locataire_id={agent_drop_down.Text}, bien_id='{Bien_drop_down.Text}', id_contract='{contrat_drop_down.Text}' where nom_vente='{nom_vente.Text}'";
+                string sql = $"Update vente set date_vente='{date_vente.Text}', agent_locataire_id=(select user_id from users where username='{agent_drop_down.Text}'), bien_id=(select id_bien from Bien where nom='{Bien_drop_down.Text}'), id_contract=(select id_contract from contracts where nom_contract='{contrat_drop_down.Text}') where nom_vente='{nom_vente.Text}'";
                 if (connection.executer(sql) > 0)
                 {
                     RadMessageBox.Show("Vente modifier!");

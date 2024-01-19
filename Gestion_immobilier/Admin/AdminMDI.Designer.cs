@@ -32,6 +32,8 @@
             this.radMenuButtonItem1 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radMenuButtonItem2 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radMenuButtonItem3 = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.radMenuButtonItem4 = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.radMenuButtonItem5 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -42,7 +44,9 @@
             this.radMenuItem1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem1,
             this.radMenuButtonItem2,
-            this.radMenuButtonItem3});
+            this.radMenuButtonItem3,
+            this.radMenuButtonItem4,
+            this.radMenuButtonItem5});
             this.radMenuItem1.Name = "radMenuItem1";
             this.radMenuItem1.Text = "Gerer";
             // 
@@ -76,6 +80,26 @@
             this.radMenuButtonItem3.Text = "Utilisateurs";
             this.radMenuButtonItem3.Click += new System.EventHandler(this.radMenuButtonItem3_Click);
             // 
+            // radMenuButtonItem4
+            // 
+            // 
+            // 
+            // 
+            this.radMenuButtonItem4.ButtonElement.ShowBorder = false;
+            this.radMenuButtonItem4.Name = "radMenuButtonItem4";
+            this.radMenuButtonItem4.Text = "Vente";
+            this.radMenuButtonItem4.Click += new System.EventHandler(this.radMenuButtonItem4_Click);
+            // 
+            // radMenuButtonItem5
+            // 
+            // 
+            // 
+            // 
+            this.radMenuButtonItem5.ButtonElement.ShowBorder = false;
+            this.radMenuButtonItem5.Name = "radMenuButtonItem5";
+            this.radMenuButtonItem5.Text = "Location";
+            this.radMenuButtonItem5.Click += new System.EventHandler(this.radMenuButtonItem5_Click);
+            // 
             // radMenu1
             // 
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
@@ -83,7 +107,7 @@
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1110, 25);
+            this.radMenu1.Size = new System.Drawing.Size(1218, 25);
             this.radMenu1.TabIndex = 0;
             // 
             // AdminMDI
@@ -91,7 +115,7 @@
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 681);
+            this.ClientSize = new System.Drawing.Size(1218, 375);
             this.Controls.Add(this.radMenu1);
             this.IsMdiContainer = true;
             this.Name = "AdminMDI";
@@ -112,5 +136,7 @@
         private Telerik.WinControls.UI.RadMenuButtonItem radMenuButtonItem1;
         private Telerik.WinControls.UI.RadMenuButtonItem radMenuButtonItem2;
         private Telerik.WinControls.UI.RadMenuButtonItem radMenuButtonItem3;
+        private Telerik.WinControls.UI.RadMenuButtonItem radMenuButtonItem4;
+        private Telerik.WinControls.UI.RadMenuButtonItem radMenuButtonItem5;
     }
 }

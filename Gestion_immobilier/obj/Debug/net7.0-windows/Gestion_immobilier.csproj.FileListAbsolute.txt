@@ -96,3 +96,5 @@ C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Bien.resources
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Admin.Utilisateurs.resources
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Client.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Location.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Vente.resources
