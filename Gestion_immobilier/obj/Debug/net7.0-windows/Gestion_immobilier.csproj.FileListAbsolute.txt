@@ -94,3 +94,5 @@ C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\bin\Debug\net7
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Admin.AdminMDI.resources
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Bien.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Admin.Utilisateurs.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Client.resources

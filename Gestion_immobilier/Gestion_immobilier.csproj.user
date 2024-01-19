@@ -5,6 +5,9 @@
     <Compile Update="Admin\AdminMDI.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Admin\Utilisateurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -12,6 +15,15 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Shared\Bien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Shared\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Shared\Location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Shared\Vente.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

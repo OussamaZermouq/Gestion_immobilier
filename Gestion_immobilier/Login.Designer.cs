@@ -54,44 +54,45 @@
             // 
             this.username_input.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.username_input.Location = new System.Drawing.Point(202, 225);
-            this.username_input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.username_input.Margin = new System.Windows.Forms.Padding(4);
             this.username_input.Name = "username_input";
-            this.username_input.Size = new System.Drawing.Size(291, 40);
+            this.username_input.Size = new System.Drawing.Size(291, 27);
             this.username_input.TabIndex = 0;
             // 
             // password_input
             // 
             this.password_input.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.password_input.Location = new System.Drawing.Point(202, 328);
-            this.password_input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password_input.Margin = new System.Windows.Forms.Padding(4);
             this.password_input.Name = "password_input";
-            this.password_input.Size = new System.Drawing.Size(291, 40);
+            this.password_input.PasswordChar = '*';
+            this.password_input.Size = new System.Drawing.Size(291, 27);
             this.password_input.TabIndex = 1;
             // 
             // radLabel1
             // 
             this.radLabel1.Location = new System.Drawing.Point(202, 189);
-            this.radLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(85, 28);
+            this.radLabel1.Size = new System.Drawing.Size(56, 18);
             this.radLabel1.TabIndex = 2;
             this.radLabel1.Text = "Username";
             // 
             // radLabel2
             // 
             this.radLabel2.Location = new System.Drawing.Point(202, 292);
-            this.radLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(81, 28);
+            this.radLabel2.Size = new System.Drawing.Size(53, 18);
             this.radLabel2.TabIndex = 3;
             this.radLabel2.Text = "Password";
             // 
             // radCheckBox1
             // 
             this.radCheckBox1.Location = new System.Drawing.Point(202, 411);
-            this.radCheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radCheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.radCheckBox1.Name = "radCheckBox1";
-            this.radCheckBox1.Size = new System.Drawing.Size(185, 27);
+            this.radCheckBox1.Size = new System.Drawing.Size(124, 18);
             this.radCheckBox1.TabIndex = 6;
             this.radCheckBox1.Text = "Reserver ma session";
             // 
@@ -103,16 +104,16 @@
             this.radPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("radPictureBox1.Image")));
             this.radPictureBox1.ImageLayout = Telerik.WinControls.UI.RadImageLayout.FitIntoBounds;
             this.radPictureBox1.Location = new System.Drawing.Point(746, 48);
-            this.radPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.radPictureBox1.Name = "radPictureBox1";
-            this.radPictureBox1.Size = new System.Drawing.Size(392, 675);
+            this.radPictureBox1.Size = new System.Drawing.Size(353, 628);
             this.radPictureBox1.TabIndex = 7;
             this.radPictureBox1.ImageLoaded += new System.EventHandler(this.radPictureBox1_ImageLoaded);
             // 
             // radButton1
             // 
             this.radButton1.Location = new System.Drawing.Point(202, 471);
-            this.radButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(165, 36);
             this.radButton1.TabIndex = 8;
@@ -122,7 +123,7 @@
             // radButton2
             // 
             this.radButton2.Location = new System.Drawing.Point(202, 516);
-            this.radButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radButton2.Name = "radButton2";
             this.radButton2.Size = new System.Drawing.Size(165, 36);
             this.radButton2.TabIndex = 9;
@@ -131,12 +132,12 @@
             // 
             // Login
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(10, 25);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1297, 806);
+            this.ClientSize = new System.Drawing.Size(1225, 719);
             this.Controls.Add(this.radButton2);
             this.Controls.Add(this.radButton1);
             this.Controls.Add(this.radPictureBox1);
@@ -146,7 +147,6 @@
             this.Controls.Add(this.password_input);
             this.Controls.Add(this.username_input);
             this.ForeColor = System.Drawing.Color.White;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.Text = "";
             this.ThemeName = "Windows11";

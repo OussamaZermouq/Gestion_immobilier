@@ -7,7 +7,9 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Telerik.Pivot.Core.Olap;
 using Telerik.WinControls;
+using Telerik.Windows.Documents.Spreadsheet.Expressions.Functions;
 
 namespace Gestion_immobilier.Shared
 {
@@ -133,27 +135,36 @@ namespace Gestion_immobilier.Shared
             radGridView1.DataSource = Dt;
 
         }
-        public static string[] ImportPhoto()
+        public string[] ImportPhoto()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image Files (.jpg;.jpeg; .png;.gif; .bmp)|.jpg; .jpeg;.png; .gif;.bmp|All Files (.)|.";
+            OpenFileDialog openFileDialog = new OpenFileDialog(); 
+            openFileDialog.Filter = "Image Files (.jpg;.jpeg; .png;.gif; .bmp)|.jpg; .jpeg;.png; .gif;.bmp|All Files (*.*)|*.*";
+
             openFileDialog.Title = "Veuillez choisir des photos";
             openFileDialog.Multiselect = true;
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string[] selectedFilePath = openFileDialog.FileNames;
+                foreach (var file in selectedFilePath)
+                {
+                    var output = connection.executer($"Insert into reclamation_photos values ('{file}')");
+
+                }
+
                 return selectedFilePath;
             }
             else
             {
                 return null; // User canceled the operation
             }
+
+
         }
 
         private void radButton2_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

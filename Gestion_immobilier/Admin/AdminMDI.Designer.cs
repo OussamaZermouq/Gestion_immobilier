@@ -64,6 +64,7 @@
             this.radMenuButtonItem2.ButtonElement.ShowBorder = false;
             this.radMenuButtonItem2.Name = "radMenuButtonItem2";
             this.radMenuButtonItem2.Text = "Client";
+            this.radMenuButtonItem2.Click += new System.EventHandler(this.radMenuButtonItem2_Click);
             // 
             // radMenuButtonItem3
             // 
@@ -73,6 +74,7 @@
             this.radMenuButtonItem3.ButtonElement.ShowBorder = false;
             this.radMenuButtonItem3.Name = "radMenuButtonItem3";
             this.radMenuButtonItem3.Text = "Utilisateurs";
+            this.radMenuButtonItem3.Click += new System.EventHandler(this.radMenuButtonItem3_Click);
             // 
             // radMenu1
             // 
@@ -81,7 +83,7 @@
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Margin = new System.Windows.Forms.Padding(4);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(1092, 25);
+            this.radMenu1.Size = new System.Drawing.Size(1110, 25);
             this.radMenu1.TabIndex = 0;
             // 
             // AdminMDI
@@ -89,7 +91,7 @@
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 735);
+            this.ClientSize = new System.Drawing.Size(1110, 681);
             this.Controls.Add(this.radMenu1);
             this.IsMdiContainer = true;
             this.Name = "AdminMDI";

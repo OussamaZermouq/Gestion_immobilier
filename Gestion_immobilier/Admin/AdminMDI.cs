@@ -30,7 +30,22 @@ namespace Gestion_immobilier.Admin
 
         private void AdminMDI_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("C:\\Users\\oussa\\source\\repos\\Gestion_immobilier\\Gestion_immobilier\\Images\\background.png");
+        }
 
+        private void radMenuButtonItem3_Click(object sender, EventArgs e)
+        {
+            Utilisateurs user_form = new Utilisateurs();
+            user_form.MdiParent = this;
+            user_form.Show();
+
+        }
+
+        private void radMenuButtonItem2_Click(object sender, EventArgs e)
+        {
+            Client client_form= new Client();
+            client_form.MdiParent = this;
+            client_form.Show();
         }
     }
 }
