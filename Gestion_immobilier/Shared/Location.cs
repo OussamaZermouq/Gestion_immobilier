@@ -84,6 +84,19 @@ namespace Gestion_immobilier.Shared
 
         private void Location_Load(object sender, EventArgs e)
         {
+            if (Login.role == "Locataire")
+            {
+                date_location_debut.Enabled= false;
+                date_location_fin.Enabled= false;
+                contrat_drop_down.Enabled= false;
+                Bien_drop_down.Enabled= false;
+                locataire_drop_down.Enabled= false;
+                contrat_drop_down.Enabled= false;
+                
+                ajouter.Enabled= false;
+                modifier.Enabled= false;
+                supprimer.Enabled= false;
+            }
 
             connection = new Connection();
             remplir_comboboxes();

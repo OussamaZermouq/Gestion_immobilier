@@ -8,16 +8,34 @@
     <Compile Update="Admin\Utilisateurs.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Agent Immobilier\AgentMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Locataire\Ajouter_reclamation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Locataire\Locataire_MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RadForm1.cs">
+    <Compile Update="Proprietaire\Proprietaire_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Shared\achat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Shared\Bien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Shared\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Shared\consulter_reclamation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Shared\contrat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Shared\Location.cs">

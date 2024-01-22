@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
@@ -40,11 +40,11 @@
             this.tailleinput = new Telerik.WinControls.UI.RadButtonTextBox();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.DescriptionInput = new Telerik.WinControls.UI.RadRichTextEditor();
-            this.office2019LightTheme1 = new Telerik.WinControls.Themes.Office2019LightTheme();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radOpenFileDialog1 = new Telerik.WinControls.UI.RadOpenFileDialog();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.ajouter_button = new Telerik.WinControls.UI.RadButton();
             this.modifier_button = new Telerik.WinControls.UI.RadButton();
             this.supprimer_button = new Telerik.WinControls.UI.RadButton();
@@ -55,7 +55,10 @@
             this.propcombobox = new Telerik.WinControls.UI.RadDropDownList();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.radButton2 = new Telerik.WinControls.UI.RadButton();
+            this.office2019LightTheme1 = new Telerik.WinControls.Themes.Office2019LightTheme();
+            this.desertTheme1 = new Telerik.WinControls.Themes.DesertTheme();
+            this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
+            this.theme_choose = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
@@ -70,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             this.radSeparator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ajouter_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modifier_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supprimer_button)).BeginInit();
@@ -80,7 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.propcombobox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_choose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,6 +216,15 @@
             this.radSeparator1.Size = new System.Drawing.Size(475, 201);
             this.radSeparator1.TabIndex = 12;
             // 
+            // radButton2
+            // 
+            this.radButton2.Location = new System.Drawing.Point(278, 134);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(194, 48);
+            this.radButton2.TabIndex = 12;
+            this.radButton2.Text = "Voir les images";
+            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
+            // 
             // ajouter_button
             // 
             this.ajouter_button.Location = new System.Drawing.Point(332, 513);
@@ -295,7 +308,7 @@
             // 
             this.radGridView1.MasterTemplate.AllowAddNewRow = false;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.Size = new System.Drawing.Size(797, 222);
             this.radGridView1.TabIndex = 17;
@@ -306,14 +319,16 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // radButton2
+            // theme_choose
             // 
-            this.radButton2.Location = new System.Drawing.Point(278, 134);
-            this.radButton2.Name = "radButton2";
-            this.radButton2.Size = new System.Drawing.Size(194, 48);
-            this.radButton2.TabIndex = 12;
-            this.radButton2.Text = "Voir les images";
-            this.radButton2.Click += new System.EventHandler(this.radButton2_Click);
+            this.theme_choose.DropDownAnimationEnabled = true;
+            this.theme_choose.Location = new System.Drawing.Point(1176, 12);
+            this.theme_choose.Name = "theme_choose";
+            this.theme_choose.Size = new System.Drawing.Size(161, 24);
+            this.theme_choose.TabIndex = 13;
+            this.theme_choose.Text = "Theme Chooser";
+            this.theme_choose.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.theme_choose_SelectedIndexChanged);
+            this.theme_choose.SelectedValueChanged += new System.EventHandler(this.theme_choose_SelectedValueChanged);
             // 
             // Bien
             // 
@@ -321,7 +336,8 @@
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 765);
+            this.ClientSize = new System.Drawing.Size(1373, 724);
+            this.Controls.Add(this.theme_choose);
             this.Controls.Add(this.radGridView1);
             this.Controls.Add(this.propcombobox);
             this.Controls.Add(this.radLabel8);
@@ -359,6 +375,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             this.radSeparator1.ResumeLayout(false);
             this.radSeparator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ajouter_button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modifier_button)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supprimer_button)).EndInit();
@@ -369,7 +386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.propcombobox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_choose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -388,7 +405,6 @@
         private Telerik.WinControls.UI.RadButtonTextBox codep;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadRichTextEditor DescriptionInput;
-        private Telerik.WinControls.Themes.Office2019LightTheme office2019LightTheme1;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadOpenFileDialog radOpenFileDialog1;
         private Telerik.WinControls.UI.RadButton radButton1;
@@ -404,5 +420,9 @@
         private Telerik.WinControls.UI.RadGridView radGridView1;
         private Telerik.WinControls.UI.RadButton radButton2;
         private System.Windows.Forms.ImageList imageList1;
+        private Telerik.WinControls.Themes.Office2019LightTheme office2019LightTheme1;
+        private Telerik.WinControls.Themes.DesertTheme desertTheme1;
+        private Telerik.WinControls.Themes.AquaTheme aquaTheme1;
+        private Telerik.WinControls.UI.RadDropDownList theme_choose;
     }
 }

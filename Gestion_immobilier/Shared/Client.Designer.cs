@@ -46,6 +46,9 @@
             this.num_tel_client = new Telerik.WinControls.UI.RadButtonTextBox();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.theme_choose = new Telerik.WinControls.UI.RadDropDownList();
+            this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
+            this.desertTheme1 = new Telerik.WinControls.Themes.DesertTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechercher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supprimer)).BeginInit();
@@ -63,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_tel_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_choose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,12 +214,23 @@
             this.radLabel6.TabIndex = 14;
             this.radLabel6.Text = "Type client";
             // 
+            // theme_choose
+            // 
+            this.theme_choose.DropDownAnimationEnabled = true;
+            this.theme_choose.Location = new System.Drawing.Point(1224, 12);
+            this.theme_choose.Name = "theme_choose";
+            this.theme_choose.Size = new System.Drawing.Size(161, 24);
+            this.theme_choose.TabIndex = 25;
+            this.theme_choose.Text = "Theme Chooser";
+            this.theme_choose.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.theme_choose_SelectedIndexChanged);
+            // 
             // Client
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1373, 722);
+            this.ClientSize = new System.Drawing.Size(1409, 626);
+            this.Controls.Add(this.theme_choose);
             this.Controls.Add(this.radLabel6);
             this.Controls.Add(this.num_tel_client);
             this.Controls.Add(this.radLabel5);
@@ -253,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.num_tel_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_choose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,5 +294,8 @@
         private Telerik.WinControls.UI.RadButtonTextBox num_tel_client;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadLabel radLabel6;
+        private Telerik.WinControls.UI.RadDropDownList theme_choose;
+        private Telerik.WinControls.Themes.AquaTheme aquaTheme1;
+        private Telerik.WinControls.Themes.DesertTheme desertTheme1;
     }
 }

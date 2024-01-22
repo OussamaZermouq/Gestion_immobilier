@@ -1,4 +1,5 @@
-﻿using Gestion_immobilier.Database;
+﻿using Gestion_immobilier.Admin;
+using Gestion_immobilier.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +29,33 @@ namespace Gestion_immobilier.Shared
 
         }
 
+        public void set_theme(string theme)
+        {
+
+            if (theme == "Aqua")
+            {
+
+                this.ThemeName = aquaTheme1.ThemeName;
+
+            }
+            else if (theme == "Default")
+            {
+
+                this.ThemeName = office2019LightTheme1.ThemeName;
+
+            }
+            else if (theme == "Desert")
+            {
+
+                this.ThemeName = desertTheme1.ThemeName;
+
+            }
+        }
         private void Bien_Load(object sender, EventArgs e)
         {
+            theme_choose.Items.Add("Aqua");
+            theme_choose.Items.Add("Default");
+            theme_choose.Items.Add("Desert");
 
             connection = new Connection();
             remplir_combobox_prop();
@@ -80,7 +106,18 @@ namespace Gestion_immobilier.Shared
         public void remplir_dgv()
         {
             radGridView1.Refresh();
-            Dt = connection.renvoyer_liste_deconnecté("Select b.*, username from Bien b join users u on b.proprietaire=u.user_id");
+            string query;
+            if (Login.role == "admin")
+            {
+                query = "Select b.*, username from Bien b join users u on b.proprietaire=u.user_id";
+            }
+            else
+            {
+                //pour afficher seulement les bien de lutilisateur et non pas le tout
+                query = $"Select b.*, username from Bien b join users u on b.proprietaire=u.user_id where u.user_id='{Login.user_id}'";
+
+            }
+            Dt = connection.renvoyer_liste_deconnecté(query);
             radGridView1.DataSource = Dt;
         }
 
@@ -164,6 +201,18 @@ namespace Gestion_immobilier.Shared
 
         private void radButton2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void theme_choose_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            set_theme(theme_choose.SelectedItem.ToString());
+
+        }
+
+        private void theme_choose_SelectedValueChanged(object sender, EventArgs e)
+        {
+            set_theme(theme_choose.SelectedItem.ToString());
 
         }
     }

@@ -73,7 +73,6 @@ C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\bin\Debug\net7
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.0\System.Management.dll
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.csproj.AssemblyReference.cache
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Login.resources
-C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.RadForm1.resources
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.csproj.GenerateResource.cache
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.AssemblyInfoInputs.cache
@@ -98,3 +97,10 @@ C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Client.resources
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Location.resources
 C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Shared.Vente.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Agent_Immobilier.AgentMDI.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Proprietaire.Proprietaire_form.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Ajouter_reclamation.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.Locataire.Locataire_MDI.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.consulter_reclamation.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.contrat.resources
+C:\Users\oussa\source\repos\Gestion_immobilier\Gestion_immobilier\obj\Debug\net7.0-windows\Gestion_immobilier.achat.resources

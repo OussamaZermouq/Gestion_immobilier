@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinForms.Documents.Model.Themes;
 
 namespace Gestion_immobilier.Admin
 {
@@ -70,8 +71,34 @@ namespace Gestion_immobilier.Admin
 
         }
 
+        public void set_theme(string theme)
+        {
+
+            if (theme == "Aqua")
+            {
+
+                this.ThemeName = aquaTheme1.ThemeName;
+
+            }
+            else if (theme == "Default")
+            {
+
+                this.ThemeName = office2019LightTheme1.ThemeName;
+
+            }
+            else if (AdminMDI.theme == "Desert")
+            {
+
+                this.ThemeName = desertTheme1.ThemeName;
+
+            }
+        }
         private void Utilisateurs_Load(object sender, EventArgs e)
         {
+            theme_choose.Items.Add("Aqua");
+            theme_choose.Items.Add("Default");
+            theme_choose.Items.Add("Desert");
+
             connection = new Connection();
             remplir_combobox_roles();
             remplir_dgv();
@@ -129,6 +156,11 @@ namespace Gestion_immobilier.Admin
             radGridView1.Refresh();
             Dt = connection.renvoyer_liste_deconnecté($"select * from users where username= '{username_input.Text}'");
             radGridView1.DataSource = Dt;
+        }
+
+        private void theme_choose_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            set_theme(theme_choose.SelectedItem.ToString());
         }
     }
 }

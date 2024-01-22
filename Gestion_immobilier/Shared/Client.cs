@@ -1,4 +1,5 @@
-﻿using Gestion_immobilier.Database;
+﻿using Gestion_immobilier.Admin;
+using Gestion_immobilier.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.Themes;
 
 namespace Gestion_immobilier.Shared
 {
@@ -39,6 +41,10 @@ namespace Gestion_immobilier.Shared
 
         private void Client_Load(object sender, EventArgs e)
         {
+
+            theme_choose.Items.Add("Aqua");
+            theme_choose.Items.Add("Default");
+            theme_choose.Items.Add("Desert");
             connection = new Connection();
             remplir_combobox_types();
             remplir_dgv();
@@ -78,7 +84,6 @@ namespace Gestion_immobilier.Shared
             }
 
         }
-
         private void supprimer_Click(object sender, EventArgs e)
         {
 
@@ -88,6 +93,32 @@ namespace Gestion_immobilier.Shared
                 RadMessageBox.Show("Client supprimer!");
             }
             remplir_dgv();
+        }
+        public void set_theme(string theme)
+        {
+
+            if (theme == "Aqua")
+            {
+
+                this.ThemeName = aquaTheme1.ThemeName;
+
+            }
+            else if (theme == "Default")
+            {
+
+                this.ThemeName = office2019LightTheme1.ThemeName;
+
+            }
+            else if (AdminMDI.theme == "Desert")
+            {
+
+                this.ThemeName = desertTheme1.ThemeName;
+
+            }
+        }
+        private void theme_choose_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            set_theme(theme_choose.SelectedItem.ToString());
         }
     }
 }

@@ -12,7 +12,8 @@ namespace Gestion_immobilier.Admin
 {
     public partial class AdminMDI : Telerik.WinControls.UI.RadForm
     {
-        
+
+        public static string theme;
 
         public AdminMDI()
         {
@@ -31,6 +32,24 @@ namespace Gestion_immobilier.Admin
         private void AdminMDI_Load(object sender, EventArgs e)
         {
             this.BackgroundImage = Image.FromFile("C:\\Users\\oussa\\source\\repos\\Gestion_immobilier\\Gestion_immobilier\\Images\\background.png");
+            if (theme == "Aqua")
+            {
+
+                this.ThemeName = aquaTheme1.ThemeName;
+
+            }
+            else if (theme== "Default")
+            {
+
+                this.ThemeName = office2019LightTheme1.ThemeName;
+
+            }
+            else if (theme == "Desert")
+            {
+
+                this.ThemeName = desertTheme1.ThemeName;
+
+            }
         }
 
         private void radMenuButtonItem3_Click(object sender, EventArgs e)
@@ -61,6 +80,40 @@ namespace Gestion_immobilier.Admin
             Location location = new Location();
             location.MdiParent = this;
             location.Show();
+        }
+
+        private void radMenuButtonItem6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radMenuButtonItem7_Click(object sender, EventArgs e)
+        {
+            consulter_reclamation consulter_Reclamation = new consulter_reclamation();
+            consulter_Reclamation.MdiParent = this;
+            consulter_Reclamation.Show();
+        }
+
+        private void radMenuButtonItem6_Click_1(object sender, EventArgs e)
+        {
+            this.ThemeName = office2019LightTheme1.ThemeName;
+        }
+
+        private void radMenuButtonItem8_Click(object sender, EventArgs e)
+        {
+            this.ThemeName = desertTheme1.ThemeName;
+        }
+
+        private void radMenuButtonItem9_Click(object sender, EventArgs e)
+        {
+            this.ThemeName = aquaTheme1.ThemeName;
+        }
+
+        private void achat_button_Click(object sender, EventArgs e)
+        {
+            achat achat = new achat();
+            achat.MdiParent = this;
+            achat.Show();
         }
     }
 }

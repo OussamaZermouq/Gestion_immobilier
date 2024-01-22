@@ -30,7 +30,6 @@
         {
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.office2019LightTheme1 = new Telerik.WinControls.Themes.Office2019LightTheme();
             this.username_input = new Telerik.WinControls.UI.RadButtonTextBox();
             this.password_input = new Telerik.WinControls.UI.RadButtonTextBox();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -43,6 +42,10 @@
             this.modifier = new Telerik.WinControls.UI.RadButton();
             this.supprimer = new Telerik.WinControls.UI.RadButton();
             this.rechercher = new Telerik.WinControls.UI.RadButton();
+            this.office2019LightTheme1 = new Telerik.WinControls.Themes.Office2019LightTheme();
+            this.desertTheme1 = new Telerik.WinControls.Themes.DesertTheme();
+            this.aquaTheme1 = new Telerik.WinControls.Themes.AquaTheme();
+            this.theme_choose = new Telerik.WinControls.UI.RadDropDownList();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.username_input)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.password_input)).BeginInit();
@@ -57,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.modifier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.supprimer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechercher)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_choose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,12 +180,23 @@
             this.rechercher.Text = "Rechercher";
             this.rechercher.Click += new System.EventHandler(this.rechercher_Click);
             // 
+            // theme_choose
+            // 
+            this.theme_choose.DropDownAnimationEnabled = true;
+            this.theme_choose.Location = new System.Drawing.Point(1087, 12);
+            this.theme_choose.Name = "theme_choose";
+            this.theme_choose.Size = new System.Drawing.Size(161, 24);
+            this.theme_choose.TabIndex = 11;
+            this.theme_choose.Text = "Theme Chooser";
+            this.theme_choose.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.theme_choose_SelectedIndexChanged);
+            // 
             // Utilisateurs
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(7, 15);
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 645);
+            this.ClientSize = new System.Drawing.Size(1272, 646);
+            this.Controls.Add(this.theme_choose);
             this.Controls.Add(this.rechercher);
             this.Controls.Add(this.supprimer);
             this.Controls.Add(this.modifier);
@@ -197,7 +212,7 @@
             this.Controls.Add(this.radLabel1);
             this.Name = "Utilisateurs";
             this.Text = "Utilisateurs";
-            this.ThemeName = "Office2019Light";
+            this.ThemeName = "Desert";
             this.Load += new System.EventHandler(this.Utilisateurs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.username_input)).EndInit();
@@ -213,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.modifier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.supprimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechercher)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.theme_choose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,7 +238,6 @@
         #endregion
 
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.Themes.Office2019LightTheme office2019LightTheme1;
         private Telerik.WinControls.UI.RadButtonTextBox username_input;
         private Telerik.WinControls.UI.RadButtonTextBox password_input;
         private Telerik.WinControls.UI.RadLabel radLabel2;
@@ -235,5 +250,9 @@
         private Telerik.WinControls.UI.RadButton modifier;
         private Telerik.WinControls.UI.RadButton supprimer;
         private Telerik.WinControls.UI.RadButton rechercher;
+        private Telerik.WinControls.Themes.Office2019LightTheme office2019LightTheme1;
+        private Telerik.WinControls.Themes.DesertTheme desertTheme1;
+        private Telerik.WinControls.Themes.AquaTheme aquaTheme1;
+        private Telerik.WinControls.UI.RadDropDownList theme_choose;
     }
 }
